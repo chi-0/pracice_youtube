@@ -1,0 +1,239 @@
+:root {
+  /* color */
+  --white-color: #fff;
+  --black-color: #140a00;
+  --blue-color: #045fd4;
+  --red-color: #ff0000;
+  --grey-dark-color: #909090;
+  --grey-light-color: #e0e0e0;
+
+  /* size */
+  --padding: 12px;
+  --avatar-size: 36px;
+
+  /* font size */
+  --font-large: 18px;
+  --font-medium: 14px;
+  --font-small: 12px;
+  --font-micro: 10px;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+button, button:focus {
+  border: none;
+  cursor: pointer;
+  outline: none;
+  background-color: var(--white-color);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--padding);
+  align-items: center;
+  background-color: var(--white-color);
+  color: var(--black-color);
+}
+
+header .logo {
+  font-size: var(--font-large);
+}
+
+header .logo i {
+  color: var(--red-color);
+}
+
+header .icons a i{
+  color: var(--black-color);
+}
+
+header .icons .fa-magnifying-glass {
+  margin-right: var(--padding);
+}
+
+.player {
+  text-align: center;
+  background-color: var(--black-color);
+  position: sticky;
+  top: 0;
+}
+
+.player iframe {
+  width: 100%;
+  height: 270px;
+  max-width: 920px;
+}
+
+.info {
+  padding: var(--padding);
+}
+
+.info .info_top .hashtags {
+  display: flex;
+  font-size: var(--font-small);
+}
+
+.info .info_top .hashtags li {
+  margin-right: var(--padding);
+}
+
+.info .info_top .hashtags li a {
+  color: var(--blue-color);
+}
+
+.info .info_top .titleAndButton {
+  display: flex;
+}
+
+.info .info_top .titleAndButton .title {
+  font-size: var(--font-medium);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  margin-right: var(--padding);
+}
+
+.info .info_top .titleAndButton .moreBtn {
+  height: 100%;
+}
+
+.info .views {
+  font-size: var(--font-small);
+  color: var(--grey-dark-color);
+}
+
+.info .info_middle {
+  display: flex;
+  justify-content: space-around;
+  margin: var(--padding) 0;
+}
+
+.info .info_middle li button {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--font-small);
+  color: var(--grey-dark-color);
+}
+
+.info .info_middle li button i {
+  margin: 0 auto;
+  margin-bottom: calc(var(--padding) / 2);
+  font-size: 16px;
+}
+
+.info .info_bottom {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--grey-light-color);
+  border-bottom: 1px solid var(--grey-light-color);
+}
+
+.info .info_bottom .metadata {
+  display: flex;
+  align-items: center;
+}
+
+.info .info_bottom .metadata img {
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  border-radius: 50%;
+}
+
+.info .info_bottom .metadata .info {
+  display: flex;
+  flex-direction: column;
+}
+
+.info .info_bottom .metadata .info .name {
+  font-size: var(--font-medium);
+}
+
+.info .info_bottom .metadata .info .subscribers {
+  font-size: var(--font-small);
+  color: var(--grey-dark-color);
+}
+
+.info .info_bottom .subscribe {
+  text-transform: uppercase;
+  color: var(--red-color);
+  font-size: var(--font-medium);
+}
+
+.doc {
+  padding: 0 var(--padding);
+}
+
+.doc > .title {
+  font-size: var(--font-medium);
+  color: var(--grey-dark-color);
+  margin-bottom: calc(var(--padding) / 2);
+}
+
+.doc .item {
+  display: flex;
+  margin-top: var(--padding);
+}
+
+.doc .item .img {
+  flex: 1 1 35%;
+  margin-right: var(--padding);
+}
+
+.doc .item .img img {
+  width: 100%;
+}
+
+.doc .item .info {
+  flex: 1 1 60%;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.doc .item .moreBtn {
+  height: 100%;
+  flex: 1 1 5%;
+}
+
+.doc .item .info .title {
+  font-size: var(--font-small);
+}
+
+.doc .item .info .name, .doc .item .info .views {
+  font-size: var(--font-micro);
+  color: var(--grey-dark-color);
+}
+
+.infoAndDoc {
+  display: flex;
+  flex-direction: column;
+}
+
+.active {
+  color: var(--blue-color);
+}
+
+@media screen and (min-width: 768px) {
+  .infoAndDoc {
+    flex-direction: row;
+    margin: var(--padding) 0;
+  }
+}
